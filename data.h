@@ -8,7 +8,10 @@
 #include <stdio.h>
 #include <algorithm>
 
-using namespace std;
+using std::string;
+using std::vector;
+using std::cout;
+using std::endl;
 
 #include "rhomap_tools.h"
 
