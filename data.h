@@ -186,7 +186,10 @@ public:
 		for (i=0; i<random_seq_subset_size+1; i++)
 			order[i] = i;
 
-		random_shuffle(order.begin()+1, order.end());
+		for (i=random_seq_subset_size; i>1; i--) {
+			j = 1 + (int)(ran2()*i);
+			int tmp = order[i]; order[i] = order[j]; order[j] = tmp;
+		}
 
 		for (i=1; i<random_seq_subset_size+1; i++)
 			for (j=0; j<lseq+1; j++)
